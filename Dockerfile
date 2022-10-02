@@ -1,6 +1,6 @@
 FROM steamcmd/steamcmd:ubuntu-20
 
-ARG TMOD_VERSION=2022.08.54.2
+ARG TMOD_VERSION=2022.09.47.4
 ARG TERRARIA_VERSION=1436
 
 
@@ -24,7 +24,7 @@ WORKDIR /root/terraria-server
 RUN wget https://github.com/tModLoader/tModLoader/releases/download/v${TMOD_VERSION}/tModLoader.zip 
 RUN unzip -o tModLoader.zip 
 RUN rm tModLoader.zip 
-RUN chmod u+x DedicatedServerUtils/Setup_tModLoaderServer.sh
+#RUN chmod u+x DedicatedServerUtils/Setup_tModLoaderServer.sh
 RUN chmod u+x ./start-tModLoaderServer.sh
 RUN chmod u+x LaunchUtils/ScriptCaller.sh
 
